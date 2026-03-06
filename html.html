@@ -15,6 +15,59 @@
                 border:2px solid #a81212 
             }
 
+            /** #RRGGBB (red, green, blue) - variam de 00 -> ff **/
+            /** #FF0000 -> vermelho**/
+            /** #00FF00 -> verde**/
+            /** #0000FF -> azul**/
+
+            table,td,th,caption {
+                border: 1px solid #a81212;
+                border-collapse:collapse;
+            }
+
+            #tabela-chuurrasco,caption{
+                border-radius: 10px 10px 0px 0px;
+
+            }
+
+            #tabela-churrasco, #tabela-churrasco td, #tabela-churrasco th, #tabela-churrasco caption{
+
+                border:2px solid #9bee00;
+                border-collapse: collapse;
+            }
+
+            #tabela-churrasco tr:nth-child(2n){
+                background-color: aquamarine;
+            }
+            #tabela-churrasco td:hover{
+                background-color: gold;  
+            }
+
+            #tabela-churrasco tr:hover{
+                background-color: rgb(182, 182, 182);
+                font-size: 2em;
+                transition: ease-in-out 2s;
+            }
+
+            #card{
+                border: 1px solid #a81212;
+                box-shadow: 2px 3px gray;
+                display: inline-block;
+            }
+            #card h2{
+                display: inline-block
+
+            }
+            #card #musa-winx{
+                width:40px;
+                border-radius: 50%;
+            }
+            #card #winx{
+                width: 200px;
+                display: block;
+                margin: 10px
+            }
+          
         </style>
         
     </head>
@@ -77,6 +130,7 @@ caiu.
 <hr>
 
     <h3>Lista de alimentos não-ordenada:</h3>
+
         <ul>
             <li>Água</li>
             <li>Guaraná</li>
@@ -117,6 +171,142 @@ caiu.
     <p>
         <a href="https://cinema10.com.br/noticias/o-clube-das-winx-ganhara-live-action-pela-netflix">Fonte da imagem</a>
     </p>  
+
+    <!--Criação de tabela-->
+    <table> 
+
+        <!--Título da tabela-->
+        <caption>Letrinhas </caption>
+
+        <!-- o Tr cria a linha (table row)-->
+        <tr>
+
+            <!-- O Th é o cabeçalho da coluna -->
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+
+        </tr>
+
+        <tr>
+
+            <!-- o td cria a coluna-->
+            <td rowspan ="2" colspan="2" >!!</td>
+            <td>b</td>
+            <td>c</td>
+        </tr>
+
+        <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+        </tr>
+
+    </table>
+    <p></p>
+    <table id="tabela-churrasco">
+
+        <caption> Lista de Compras</caption>
+
+
+        <tr>
+            <th>Itens</th>
+            <th>Classificação</th>
+            <th>Descricao</th>
+            <th>Quantidade</th>
+            <th>Valor</th>
+            <th>Subtotal</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td rowspan="3"> Comidas</td>
+            <td>Carne</td>
+            <td>6</td>
+            <td>40</td>
+            <td>240</td>
+        </tr>
+            
+        <tr>
+            <td>2</td>
+            <td>Frango</td>
+            <td>2</td>
+            <td>15</td>
+            <td>30</td>
+        </tr>  
+        
+        <tr>
+            <td>3</td>
+            <td>Pão de Alho</td>
+            <td>2</td>
+            <td>15</td>
+            <td>30</td>
+        </tr>      
+        <tr>
+            <td>4</td>
+            <td rowspan="3"> Bebidas</td>
+            <td>Coca-cola</td>
+            <td>20</td>
+            <td>5</td>
+            <td>100</td>
+        </tr>  
+        <tr>
+            <td>5</td>
+            <td>Água gelada</td>
+            <td>5</td>
+            <td>3</td>
+            <td>15</td>
+        </tr> 
+        <tr>
+            <td>6</td>
+            <td>Suco de laranja</td>
+            <td>5</td>
+            <td>8</td>
+            <td>8</td>
+        </tr> 
+        <tr>
+            <td>7</td>
+            <td rowspan = "3"> Outros</td>
+            <td>Guardanapo</td>
+            <td>1</td>
+            <td>5</td>
+            <td>5</td>
+        </tr> 
+        <tr>
+            <td>8</td>
+            <td>Copos descartáveis</td>
+            <td>1</td>
+            <td>8</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Carvão</td>
+            <td>1</td>
+            <td>32</td>
+            <td>32</td>
+        </tr>
+
+        <tr>
+
+            <td colspan="5">Total</td>
+            <td>500</td>
+        </tr>
+
+    </table>
+
+    <h1>Container</h1>
+
+    <div id ="card">
+        
+        <img id="musa-winx" src="./imgs/musa-winx.jpg" alt="O clube das Winx">
+        <h2>Titulo</h2>
+
+        
+         <img id="winx" src="./imgs/winx.jpeg" alt="O clube das Winx">
+
+
+    </div>
 
     </body>
 

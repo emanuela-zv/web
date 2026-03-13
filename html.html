@@ -206,92 +206,97 @@ caiu.
     <p></p>
     <table id="tabela-churrasco">
 
-        <caption> Lista de Compras</caption>
+        <thead> 
+            <caption> Lista de Compras</caption>
+            <tr>
+                <th>Itens</th>
+                <th>Classificação</th>
+                <th>Descricao</th>
+                <th>Quantidade</th>
+                <th>Valor</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
 
+        <TBODY>
 
-        <tr>
-            <th>Itens</th>
-            <th>Classificação</th>
-            <th>Descricao</th>
-            <th>Quantidade</th>
-            <th>Valor</th>
-            <th>Subtotal</th>
-        </tr>
-
-        <tr>
-            <td>1</td>
-            <td rowspan="3"> Comidas</td>
-            <td>Carne</td>
-            <td>6</td>
-            <td>40</td>
-            <td>240</td>
-        </tr>
+            <tr>
+                <td>1</td>
+                <td rowspan="3"> Comidas</td>
+                <td>Carne</td>
+                <td>6</td>
+                <td>40</td>
+                <td>240</td>
+            </tr>
+                
+            <tr>
+                <td>2</td>
+                <td>Frango</td>
+                <td>2</td>
+                <td>15</td>
+                <td>30</td>
+            </tr>  
             
-        <tr>
-            <td>2</td>
-            <td>Frango</td>
-            <td>2</td>
-            <td>15</td>
-            <td>30</td>
-        </tr>  
-        
-        <tr>
-            <td>3</td>
-            <td>Pão de Alho</td>
-            <td>2</td>
-            <td>15</td>
-            <td>30</td>
-        </tr>      
-        <tr>
-            <td>4</td>
-            <td rowspan="3"> Bebidas</td>
-            <td>Coca-cola</td>
-            <td>20</td>
-            <td>5</td>
-            <td>100</td>
-        </tr>  
-        <tr>
-            <td>5</td>
-            <td>Água gelada</td>
-            <td>5</td>
-            <td>3</td>
-            <td>15</td>
-        </tr> 
-        <tr>
-            <td>6</td>
-            <td>Suco de laranja</td>
-            <td>5</td>
-            <td>8</td>
-            <td>8</td>
-        </tr> 
-        <tr>
-            <td>7</td>
-            <td rowspan = "3"> Outros</td>
-            <td>Guardanapo</td>
-            <td>1</td>
-            <td>5</td>
-            <td>5</td>
-        </tr> 
-        <tr>
-            <td>8</td>
-            <td>Copos descartáveis</td>
-            <td>1</td>
-            <td>8</td>
-            <td>8</td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>Carvão</td>
-            <td>1</td>
-            <td>32</td>
-            <td>32</td>
-        </tr>
+            <tr>
+                <td>3</td>
+                <td>Pão de Alho</td>
+                <td>2</td>
+                <td>15</td>
+                <td>30</td>
+            </tr>      
+            <tr>
+                <td>4</td>
+                <td rowspan="3"> Bebidas</td>
+                <td>Coca-cola</td>
+                <td>20</td>
+                <td>5</td>
+                <td>100</td>
+            </tr>  
+            <tr>
+                <td>5</td>
+                <td>Água gelada</td>
+                <td>5</td>
+                <td>3</td>
+                <td>15</td>
+            </tr> 
+            <tr>
+                <td>6</td>
+                <td>Suco de laranja</td>
+                <td>5</td>
+                <td>8</td>
+                <td>8</td>
+            </tr> 
+            <tr>
+                <td>7</td>
+                <td rowspan = "3"> Outros</td>
+                <td>Guardanapo</td>
+                <td>1</td>
+                <td>5</td>
+                <td>5</td>
+            </tr> 
+            <tr>
+                <td>8</td>
+                <td>Copos descartáveis</td>
+                <td>1</td>
+                <td>8</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Carvão</td>
+                <td>1</td>
+                <td>32</td>
+                <td>32</td>
+            </tr>
+        </TBODY>
 
-        <tr>
+        <TFOOT>
+            <tr>
 
-            <td colspan="5">Total</td>
-            <td>500</td>
-        </tr>
+                <td colspan="5">Total</td>
+                <td>500</td>
+            </tr>
+        </TFOOT>
 
     </table>
 
@@ -308,6 +313,40 @@ caiu.
 
     </div>
 
+    <hr>
+
+    <h2>Fornmulários e Inputs</h2>
+
+    <a href="https://www.w3schools.com/tags/tag_tbody.asp"></a>
+
+    <form action=""></form>
+
+    <label for="nome">Informe seu nome</label>
+    <input id="nome" type="text" value="Emanuela">
+    <label for="cor">Cor</label>
+    <input id="cor" type="color">
+    <label for="DtNascimento">Data de nascimento</label>
+    <input id="DtNascimento" type="date">
+    <input type="datetime">
+    <input type="file">
+    <input type="number">
+    <input type="checkbox" name="" id="">
+    <input type="radio" name="" id="">
+    <input type="range">
+
+    <input type="submit" value="Submit">
+    
     </body>
+
+    <button>Botão</button>
+
+    <form action="https://google.com/search" method="get">
+
+        <label for="chave">O que procura?</label>
+        <input type="text" name="q" id="chave">
+
+        <input type="submit" value="Pesquisar">
+
+    </form>
 
 </html>

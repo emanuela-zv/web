@@ -2,13 +2,193 @@
 <html >
 <head>
     <title>Curriculo</title>
+
+    <style>
+        #eu{
+            width: 100px;
+            border-radius: 50%;
+            
+            border-color: black;
+        }
+        #c #nome{
+            display: inline-block;
+        }
+        #c #pEu {
+            display: inline-block;
+        }
+        #horarios, td, th, tr, caption{
+            border: 2px solid;
+            border-color: black;
+            border-collapse: collapse;
+            text-align: center;
+        
+        }
+        caption{
+            background-color: rgb(87, 200, 235);
+        }
+        #desenhoLua, #desenhoFada, #fotografiaB{
+            width: 200px;
+            border: 2px;
+            border-style: solid;
+            border-color: rgb(17, 0, 90);
+            display: block;
+        }
+
+    </style>
 </head>
 <body>
 
-    <p>Nome completo: Emanuela Zimmermann Vieira</p>
-    <p>
-        <img id=pepe src="./imgs/pepe.jpg"  alt="Foto do Pepe">
-    </p>
+    <div id="c">
+
+        <p id="pEu">
+        <img id= "eu" src="/imgs/desenho.jpg" alt="Ilustração da Emanuela"></p>
+        <span id="nome"> <strong>Nome: </strong>Emanuela Zimmermann Vieira</span>
+        <p id="email"><strong>Email:</strong> <a href="mailto:">emanuela.z@aluno.ifsc.edu.br</a></p>
+        <p><strong>Contato: </strong><a href="tel:+">(47) 99999-9999</a></p>
+        <p><strong>Descrição: </strong>Estudante do ensino médio técnico em informática do IFSC câmpus Gaspar.</p>
+        <p><strong>Habilidades: </strong></p>
+        <ul>
+            <li>Escrita em prosa e em verso;</li>
+            <li>Desenhos abstratos e de observação</li>
+            <li>Costura de bichinhos de pelúcia</li>
+            <li>Tricotar xales</li>
+            <li>Fazer artesanato</li>
+        </ul>
+        <section>
+            <p id="formacao"><strong>Formação: </strong>
+            <ul>
+                <li>Ensino Médio incompleto - finaliza em jul/2026</li>
+                <li>Curso de Escrita Criativa - PUCRS</li>
+                <li>Academia de Escritores - Karou </li>
+                <li>Curso FIC de Desenho Artístico - IFSC</li>
+                <li>Curso FIC de Modelagem Básica - IFSC</li>
+                <li>Clube de Teatro - IFSC</li>
+                <li>Clube de Artes - IFSC</li>
+                <li>Clube de Dança - IFSC</li>
+            </ul>
+        </section>
+
+        <p id="experiencia"> <strong>Experiência Profissional: </strong></p>
+
+        <ul>
+            <li>Auxilio em <strong>administrar</strong> o clube de Teatro do <mark>IFSC Câmpus Gaspar</mark> entre o segundo semestre de <em>2023</em> e o último semestre de <em>2025</em>.</li>
+            <li><strong>Fotografia </strong>de evento de bordados ocorrido em <mark>Joinville</mark> em <em>2025</em>.</li>
+            <li><strong>Criação</strong> de posts para o <mark>Instagram</mark> do clube de teatro, dentre <em>2023</em> e <em>2025</em></li>
+        </ul>
+    </div>
+
+    <h3>Exemplos das minhas habilidades:</h3>
+
+    <img id="desenhoLua" src="/imgs/desenhoLua.jpg" alt="Desenho com colagem">
+    <p><sub>Desenho junto de Colagem</sub></p>
+    <img id="desenhoFada" src="/imgs/desenhoFada.jpg" alt="Desenho de fada">
+    <p><sub>Desenho de fada verde</sub></p>
+    <img id="fotografiaB" src="/imgs/fotografiaB.jpg" alt="Fotografia de bordado">
+    <p><sub>Fotografia de mão bordando</sub></p>
+
+    <a href="https://github.com/emanuela-zv">Link</a> <span> para a página do GitHub</span>
+
+    <hr>
     
+    <table id="horarios">
+
+        <thead>
+            <caption> <b>Tabela de Horários</b></caption>
+
+            <tr>
+                <th>Hora</th>
+                <th>Segunda-Feira</th>
+                <th>Terça-Feira</th>
+                <th>Quarta-Feira</th>
+                <th>Quinta-Feira</th>
+                <th>Sexta-Feira</th>
+                <th>Sábado</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td> 7:20 - 8:15 </td>
+                <td rowspan="2">Português</td>
+                <td rowspan="2">Empreendedorismo</td>
+                <td rowspan="3">Projeto Integrador</td>
+                <td rowspan="3">Prog.para jogos digitais</td>
+                <td>Matemática</td>
+            </tr>
+            <tr>
+                <td> 8:15 - 9:10 </td>
+                <td rowspan="3">Prog. para internet</td>
+                <td rowspan="2">Escrita Criativa</td>
+            </tr>
+            <tr>
+                <td> 9:30 - 10:25 </td>
+                <td>Matemática</td>
+                <td rowspan="2">Projeto Integrador</td>
+            </tr>
+            <tr>
+                <td> 10:25 - 12:15 </td>
+                <td>Sociologia</td>
+                <td>Prog. para dispositivos móveis</td>
+                <td>Prática em desenv. de sistemas</td>
+                <td>Programação</td>
+            </tr>
+            <tr>
+                <td> 14:00 - 15:30 </td>
+                <td rowspan="2">Escrita Criativa</td>
+                <td>Educação Financeira</td>
+                <td>Tricô</td>
+                <td>Desenho de observação</td>
+                <td rowspan="3">Neurociência</td>
+                <td rowspan="4"></td>
+            </tr>
+            <tr>
+                <td> 15:30 - 16:30 </td>
+                <td>Matemática para vestibular</td>
+                <td>Biologia para vestibular</td>
+                <td>História para Vestibular</td>
+            </tr>
+            <tr>
+                <td> 16:30 - 17:30 </td>
+                <td>Redação</td>
+                <td>Física para vestibular</td>
+                <td>Química para vestibular</td>
+                <td>Geografia para vestibular</td>
+            </tr>
+            <tr>
+                <td> 18:30 - 20:30 </td>
+                <td>Gramática</td>
+                <td>Revisões de matemática e física</td>
+                <td>Revisões de Biologia e Química</td>
+                <td>Revisões de História e Geografia</td>
+                <td>Revisão dos conhecimentos</td>
+            </tr>
+            <tr> 
+                <td> 20:30 - 21:30 </td>
+                <td>Leitura</td>
+                <td>Leitura</td>
+                <td>Leitura</td>
+                <td>Leitura</td>
+                <td>Leitura</td>
+                <td>Resumo e resenha da leitura</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <hr>
+
+    <details>
+
+        <summary>Menu de navegação</summary>
+            
+        <p> <a href="#formacao">Ir para a Formação</a> </p>
+        <p>  <a href="#experiencia">Ir para a Experiência Profissional</a> </p>
+
+    </details>
+
+    
+
+
+
 </body>
 </html>

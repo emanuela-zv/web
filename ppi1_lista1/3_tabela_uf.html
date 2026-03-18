@@ -9,15 +9,39 @@
 
         <style>
            table,td,th,caption {
-                border: 2px solid #14023d;
+                width: 800px;
+                border: 1px solid #000000;
                 border-collapse:collapse;
+                font-size: 1.1em;
+                text-align: center;
             }
-            caption{
+            #tabela_brasil caption{
                 background-color: rgb(253, 236, 0);
+                font-size: 1.5em;
             }
-            #tabela_brasil tr:hover{
+            #tabela_brasil tr:nth-child(-n+3){
+                background-color:#fcc859;
+            }
+            #tabela_brasil tr:nth-child(n+4):nth-child(-n+7){
+                background-color:#f1fc59;
+            } 
+            #tabela_brasil tr:nth-child(n+8):nth-child(-n+11){
+                background-color:#a8fc59;
+            }
+            #tabela_brasil tr:nth-child(n+12):nth-child(-n+18){
+                background-color: #59fc6f;
+            }
+            #tabela_brasil tr:nth-child(n+19):nth-child(-n+27){
+                background-color: #59fcaa;
+            }
+            #tabela_brasil tbody tr:hover td{
                 background-color: rgb(253, 236, 0);  
+            }      
+            #tabela_brasil{
+                margin-left: auto;
+                margin-right: auto;
             }
+        
             </style>
            
 </head>
@@ -26,7 +50,7 @@
     <table id="tabela_brasil">
 
         <thead>
-            <caption>Brasil</caption>
+            <caption><strong>Estados do Brasil</strong></caption>
 
             <tr>
                 <th>Índice</th>

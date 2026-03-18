@@ -19,6 +19,7 @@
         #mensagem{
             width: 43%;
             height: 100px;
+           
         }
         #enviar{
             width: 30%;
@@ -28,48 +29,57 @@
             margin: auto;
             background-color: rgb(87, 151, 87);
         }
+
+
     </style> 
 
 </head>
 
 <body>
 
-    <thead>
+    <header> 
         <h2>Instruções</h2>
 
         <p>Este formulário tem como objetivo trazer uma oportunidade para assuntos necessários. <br> Portanto, preencha os campos conforme o necessário. <br>Observação: O e-mail é obrigatório!</p>
-        
-    </thead>
 
-    <tbody>
+    </header>
+    <main>
 
-        <div> 
-            <form action=""></form>
+            <form action="">
 
-            <label for="nome">Nome: </label>
-            <input id=nome type="text" placeholder="Informe o seu nome completo">
-            <label for="email">Email: </label>
-            <input  id=email type="email" name="" id="email" placeholder="seuEmail@gmail.com" required>
-            <label for="assunto">Assunto: </label>
-            <input id=assunto type="text" placeholder="O que deseja tratar?">
+            <p>
+                <label for="nome">Nome: </label>
+                <input id=nome type="text" placeholder="Informe o seu nome completo">
+            </p>
 
-            <label for="estado">Estado: </label>
-            <select id="estado">
+            <p>
+                <label for="email">Email: </label>
+                <input id=email type="email" name="" id="email" placeholder="seuEmail@gmail.com" required mailto>
+            </p>
 
-                <option value="pendente">Pendente</option>
-                <option value="resolvido">Resolvido</option>
-                <option value="cancelado">Cancelado</option>
-            </select>
+            <p>
+                <label for="assunto">Assunto: </label>
+                <input id=assunto type="textArea" placeholder="O que deseja tratar?">
+            </p>
+          
+            <p>
+                <label for="estado">Estado: </label>
+                    <select id="estado">
+                        <option value="pendente">Pendente</option>
+                        <option value="resolvido">Resolvido</option>
+                        <option value="cancelado">Cancelado</option>
+                    </select>
+            </p>
 
-            <label for="mensagem"><br>Mensagem: </label>
-            <input id=mensagem type="text" placeholder="Digite uma mensagem adicional">
-        </div>
+            <p>
+                <label for="mensagem"><br>Mensagem: </label>
+                <input id=mensagem type="textArea" placeholder="Digite uma mensagem adicional">
+            </p>
+    </main> 
 
-        <button id="enviar" type="submit">Enviar</button>
+    <footer>
 
-    </tbody>
-
-    <tfoot>    
+        <button id="enviar" type="submit">Enviar</button>   
 
         <details>
             <summary> Menu de navegação</summary>
@@ -77,7 +87,9 @@
             <p><a href="./4_curriculo.html">Currículo</a></p>
         </details>
 
-    </tfoot>
+    </footer>
+
+    </form>
     
 </body>
 

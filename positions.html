@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <title>Positions</title>
+
+    <style>
+
+        *{
+            border: 1px solid pink;
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            border-color: purple;
+            display:inline-block;
+            width: 200px;
+            height: 200px;
+
+        }
+        #box1{
+            background-color:violet;
+            position: relative;
+            top: 200px;
+            left: 100px;
+        }
+        #box2{
+            background-color:bisque;
+            position: static;
+            top: 400px;
+            left: 95px;
+        }
+        #box3{
+            background-color:palevioletred;
+            position: absolute;
+            top:5px;
+            /** Se posiciona a partir do primeiro ancestral não-estático**/
+        }
+        #box4{
+            background-color:hotpink;
+            position: fixed;
+            bottom: 0px;
+            right:0px;
+        }
+        #box5{
+            background-color:lightpink;
+        }
+        div>span{
+            background-color:deeppink;
+        }
+        #container{
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div style="height: 100px;"> </div>
+    <div id="container">
+
+        <!-- div#box$.box{$}*5-->
+
+        <div id="box1" class="box">1</div>
+        <div id="box2" class="box">2</div>
+        <div id="box3" class="box">3</div>
+        <div id="box4" class="box">4</div>
+        <div id="box5" class="box">5</div>
+        <span class="box">6</span>
+    </div>
+
+    
+</body>
+
+</html>

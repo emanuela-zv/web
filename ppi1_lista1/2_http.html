@@ -3,12 +3,86 @@
 <head>
 
     <title>Http</title>
+
+    <style>
+        #Oquehttp{
+            text-align: center;
+        }
+        p{
+            text-align: justify;
+        }
+        #requestResponse, #tcp{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px  black;
+            border-style: dashed;
+        }
+
+        figcaption{
+            text-align: center;
+        }
+
+        #pesquisa1img, #pesquisa2img {
+            border: 1px solid black;
+            width: 80%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+
+
+    </style>
 </head>
 
 <body>
-    
 
+    <h2 id="Oquehttp">O que é o HTTP</h2>
     
+    <p>O protocolo HTTP (Hypertext Transfer Protocol - Protocolo de Tranferência de Hipertexto) permite a conversa entre duas máquinas, a máquina cliente e a máquina servidor. Assim, ele é o protocolo de transferências de informações WWW.</p>
+
+    <p>Ele permite que o cliente faça uma requisição e obtenha uma resposta.</p>
+
+    <figure>
+        <img id="requestResponse" src="/imgs/requestResponse.png" alt="">
+        <figcaption>Fonte: <a href="https://mazer.dev/pt-br/http/introducao-protocolo-http/">Mazer.dev</a></figcaption>
+    </figure>
+
+    <p>Além disso, a interação entre o cliente e o servidor, ocorre através do protocolo TCP (Transmission Control Protocol) o que auxilia na garantia de que ela seja bem executada. </p>
+
+    <figure>
+        <img id="tcp" src="/imgs/Protocolo-TCP-IP-fvml.jpg" alt="">
+
+        <figcaption>Fonte: <a href="https://www.fvml.com.br/2023/05/protocolo-tcp-ip-o-que-e-como-funciona.html">FVML</a></figcaption>
+    </figure>
+
+    <p>Um exemplo comum, é realizar uma pesquisa no Google (que seria um cliente). A partir disso, ele trará uma resposta do servidor, conforme a pesquisa.</p>
+
+    <p>Para um exemplo prático, podemos realizar uma pesquisa no Google: </p>
+
+    <form action="https://google.com/search" method="get">
+
+        <label for="pesquisa">Faça a sua pesquisa: </label>
+        <input type="text" name="q" id="chave">
+
+        <input type="submit" value="Pesquisar">
+
+    </form>
+
+    <p>Ao fazer isso, observa-se que abre automaticamente um link para as respostas possíveis.</p>
+
+    <figure id="pesquisa1">
+        <img id="pesquisa1img" src="/imgs/pesquisa1.png" alt="">
+        <figcaption>Realizando a pesquisa</figcaption>
+    </figure>
+    <figure id="pesquisa2">
+        <img id="pesquisa2img" src="/imgs/pesquisa2.png" alt="">
+        <figcaption>Pesquisa realizada</figcaption>
+    </figure>
+
+   
 </body>
 
 </html>

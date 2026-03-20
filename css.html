@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    
+    <title>CSS</title>
+    <link rel="stylesheet" href="css.css">
+
+    <style>
+        /** CSS embutido no código HTML **/
+
+
+        *{
+            margin:0px; padding: 0px /** reset CSS **/
+        }
+
+        #explicacaoCSS >*{
+            background-color: #ffe60050;
+        }
+        h1{
+            color: blueviolet;
+        }
+        /** A estilização ocorre em cascata e no HTML, sempre será considerado o que está mais próximo ao elemento**/
+
+        #explicacaoCSS{
+            border: 1px solid black;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div id="explicacaoCSS">
+
+        <!--Esse style sempre irá se sobrepor sobre os outros-->
+        <h1 style="color:coral">CSS</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, debitis asperiores iusto atque mollitia dignissimos doloribus ipsam saepe, temporibus recusandae autem quibusdam distinctio ut, architecto quo quisquam repellat repellendus quaerat!</p>
+
+        <h1>Seletores</h1>
+
+        <ul>
+            <li>Nome da tag</li>
+            <li>Id ou identificador unico</li>
+            <li>Classe ou categoria</li>
+            <li>Universal - *</li>
+            <li>Descendente</li>
+            <li>Filho - ></li>
+        </ul>
+
+    </div>
+
+</body>
+</html>

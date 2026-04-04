@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4c-Display</title>
+
+    <style>
+        /**reset CSS */
+        *{
+            margin: 0px; padding: 0px;
+            
+        }
+
+        body{
+            min-height: 100vh;
+        }
+
+        .box{
+            border: 1px solid black;
+            box-sizing: border-box;
+            display: inline-block;
+            height: 20vh;
+            width: 10vw;
+            text-align: center;
+            line-height: 20vh;
+        }
+
+        #box3{
+            background-color: blue;
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+        }
+
+        #box2{
+            background-color: green;
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        #rocket{
+            
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            animation: lancamento 10s ease-in 0s infinite;
+        }
+
+        #box4{
+            background-color: yellow;
+            position: fixed;
+            right: 0px;
+            top: 0px;
+            /**animation: name duration timing-function delay iteration-count direction fill-mode;*/
+            animation: rotacao 5s linear 0s infinite
+        }
+
+        #box5{
+            background-color: magenta;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes rotacao {
+            0%{}
+
+            100%{transform: rotate(360deg);}
+        }
+
+        @keyframes lancamento {
+
+            0%{
+                bottom: 0px;
+            }
+
+            100%{
+                bottom: 700px;
+                left: 1000px;
+            }
+            
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+<!--Deixar um do lado do outro para não ter espaços entre os blocos-->
+<div id="rocket" class="rocket">🚀</div>
+<div id="box2" class="box">2</div>
+<div id="box3" class="box">3</div>
+<div id="box4" class="box">4</div>
+<div id="box5" class="box">5</div>
+    
+</body>
+</html>

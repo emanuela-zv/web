@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica Seletores</title>
+
+    <style>
+
+        /** Esse p não vai ser aplicado, porque tem outras regras mais especificas depois*/
+        p{
+            color: black;
+        }
+
+        #p1{
+            color: aqua;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #p1>span{
+            font-style: italic;
+            color: blueviolet;
+        }
+
+        .paragrafo{
+            color: cadetblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.1em;
+        }
+
+        .paragrafo>span{
+            color: gold;
+        }
+
+        #p3{
+            color: brown;
+        }
+
+        .paragrafo#p3{
+            color: darkblue;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1>Seletores CSS</h1>
+
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing <span>elit</span>. Delectus ea vitae consequuntur consectetur tempore sed assumenda perferendis sint, saepe qui dignissimos veritatis quis a molestiae, ratione reiciendis suscipit provident sunt.</p>
+
+    <p class="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing <span>elit</span>. In numquam autem facilis quibusdam quia sed sunt ipsa eaque asperiores tempora suscipit mollitia quos eum ratione, perferendis natus. Deserunt, quam magni?</p>
+
+    <p id="p3" class="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. At numquam exercitationem quibusdam reprehenderit libero minima, officiis magnam impedit consequuntur animi voluptatem obcaecati necessitatibus porro veritatis iusto illo ut similique omnis.</p>
+
+
+</body>
+</html>

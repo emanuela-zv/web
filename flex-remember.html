@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relembrando Flex</title>
+
+        <style>
+
+            #box-div-4{
+                position: relative; 
+                left: 50px; 
+                top:-30px;
+            }
+
+            .container{
+                height: 100vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around; /* Controla a exibição no eixo do flex - por padrão, é modo linha (flex-direction:row)*/
+                align-items: center ; /* Eixo perpendicular ao eixo do flex-diredction*/
+            }
+
+            .box{
+
+                background-color: cornflowerblue;
+                border: 1px solid darkblue;
+            }
+
+            /* .hover faz mudar quando passa o mouse em cima. 
+            transition define o tempo que irá demorar até chegar ao estado final*/
+            .box:hover{
+                flex-grow: 5;
+                transition: all 3s;
+            }
+
+            #box-div-1{
+                order: 6;
+            }
+            #box-div-3{
+                order: 4;
+            }
+            #box-div-5{
+                order: 0;
+            }
+            
+        </style>
+
+</head>
+<body>
+
+    <!-- 
+    
+    No CSS, flex é uma propriedade de exibição (display)
+
+     * {display: flex}
+
+     Flex é um mecanismo de posicionamento, ou gerenciador de layout linear 
+
+    O html segue o fluxo do texto, pode ser display inline ou display block. 
+    Div é do tipo block. 
+    Span é do tipo inline.
+
+    Positions -> por padrão, é static; há o relative, fixed e absolute;
+
+    Em 2008, o flex foi criado.
+     
+     -->
+
+    <!-- div.container>div.box#box-$*5{$}(Ctrl space)-->
+
+    <div class="container">
+
+        <div class="box" id="box-div-1">1</div>
+        <div class="box" id="box-div-2">2</div>
+        <div class="box" id="box-div-3">3</div>
+        <div class="box" id="box-div-4">4</div>
+        <div class="box" id="box-div-5">5</div>
+
+    </div>
+
+    
+    <div class="container">
+
+        <span class="box" id="box-span-1">1</span>
+        <span class="box" id="box-span-2">2</span>
+        <span class="box" id="box-span-3">3</span>
+        <span class="box" id="box-span-4">4</span>
+        <span class="box" id="box-span-5">5</span>
+
+    </div>
+
+</div>
+    
+</body>
+</html>

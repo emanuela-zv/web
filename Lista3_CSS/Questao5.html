@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout de Header com footer</title>
+
+    <style>
+
+        *{margin: 0px; padding: 0px;}
+
+        .container{
+            flex-direction: column;
+            display: flex;
+            height: 100vh;
+            flex-grow: 1;
+            position: relative;
+        }
+
+        .box{
+            position: relative;
+        }
+        .container2{
+            flex-direction: row;
+            display: flex;
+            flex-grow: 3;
+            
+        }
+
+        #header{
+            background-color: greenyellow;
+            flex-grow: 1;
+        }
+        #footer{
+
+            background-color: greenyellow;
+            flex-grow: 1;
+        }
+
+        #article{
+
+            background-color: rgb(219, 219, 219); 
+            flex-grow: 3;         
+            
+        }
+        #aside{
+
+            background-color: rgb(252, 255, 203);
+            flex-grow: 1;
+            
+            
+        }
+        #nav{
+
+            background-color: rgb(165, 238, 234);
+            flex-grow: 1;
+            
+        }
+
+        span{
+
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="box" id="header"> <span>Header</span></div>
+
+        <div class="container2">
+
+            <div class="box" id="article"> <span>Article</span></div>
+            <div class="box" id="aside"><span>Aside</span></div>
+            <div class="box" id="nav"><span>Nav</span></div>
+
+        </div>
+
+        <div class="box" id="footer"><span>Footer</span></div>
+
+    </div>
+
+</body>
+</html>

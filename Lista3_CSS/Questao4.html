@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout com hover</title>
+
+    <style>
+
+     *{margin: 0px; padding: 0px;}
+
+        .container{
+
+            flex-direction: row;
+            display: flex;
+            height: 100vh;
+            position: relative;
+            flex-grow: 5;
+            justify-content: space-around;
+            
+        }
+
+        .box:hover{
+            position: relative;
+            background-color: rgb(233, 10, 10);
+            flex-grow: 5;
+            transition: all 3s;
+        }
+
+        img{
+            width: 80%;
+            border-radius: 25%;
+            justify-content: center;
+        }
+
+        #box1{
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="box" id="box1">
+            <img src="../imgs/frodo.jpg" alt="Frodo de braços abertos">
+        </div>
+        <div class="box" id="box2">
+            <img src="../imgs/samwise.jpg" alt="Sam de braços abertos">
+        </div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+        <div class="box" id="box5">5</div>
+
+    </div>
+
+</body>
+</html>

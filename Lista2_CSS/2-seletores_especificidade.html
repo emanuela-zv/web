@@ -2,16 +2,25 @@
 <head>   
    <title>Exemplo especificidade de seletores</title>
    <style>
-      /*regra 1*/ li{color:red;}
-      /*regra 2*/ .churras{color:green;}
-      /*regra 3*/ .fruta{color:gray}
-      /*regra 4*/ li+li.churras{color: black;}
-      /*regra 5*/ .churras[draggable="true"]{color: magenta;}
-      /*regra 6*/ #lip1,#lip2,#lip3{color:blue}
-      /*regra 7*/ #lip3.fruta{color:orange}
-      /*regra 8*/ ol>li.churras#lip5{color:purple}
+      /*regra 1*/ li {color:red;} /* Determina que todos os elementos com a tag <li> devem ser da cor vermelha. */
+
+      /*regra 2*/ .churras{color:green;} /* Determina que os elementos que pertencem à classe churras devem ser da cor verde e embora o item possa ter a tag <li>, o uso da classe sobrepõe a estilização da tag. */
+
+      /*regra 3*/ .fruta{color:gray} /* Determina que os elementos pertencentes à classe fruta devem ser da cor cinza. Por isso, o melão é dessa cor, embora tenha a tag <li>, o uso da classe sobrepõe a estilização da tag. */
+
+      /*regra 4*/ li+li.churras{color: black;} /* Determina que o elemento que usa a tag <li> que tenha a classe churras e seja após outro elemento com a tag <li>, deve ser da cor preta.*/
+
+      /*regra 5*/ .churras[draggable="true"]{color: magenta;} /* Determina que utilize um seletor de atributo, nesse caso, verifica se um elemento está usando esse seletor (draggable) e caso esteja, ele o colore de magenta. Já o draggable, se true, permite que o usuário arraste o elemento na tela, ele consegue "pegá-lo" */
+
+      /*regra 6*/ #lip1,#lip2,#lip3 {color:blue} /* Determina que os elementos com o identificador (id) lip1, lip2 e lip3 devem ser da cor azul. Embora tenham a tag <li> e a classe fruta, o uso do identificador é mais específico e por isso ele sobrepõe as outras estilizações. */
+
+      /*regra 7*/ #lip3.fruta{color:orange} /* Determina que o elemento com identificado lip3, que pertende à classe fruta deve ser laranja. Por ser ainda mais específico, se sobrepõe às outras estilizações. */
+
+      /*regra 8*/ ol>li.churras#lip5{color:purple} /* Determina que todo elemento que tenha a tag <ol>, a tag <li>, a classe churras e o id lip5 seja colorido de roxo. Nesse caso, nenhum elemento fica roxo. */
+
    </style>
 </head>
+
 <body>   
    <ol>
    <!--item 1--> <li id="lip0">Abacaxi</li>
@@ -24,9 +33,6 @@
    <!--item 8--> <li id="lip7" class="churras" draggable="true">Pão de alho</li>
    </ol>   
 
-
-   <!--Seletor - Especifidade(Ordem):
-        *, nome da tag, .class, #, inline css-->
 </body>
 </html>
 

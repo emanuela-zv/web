@@ -10,14 +10,16 @@
         /**reset CSS */
         *{
             margin: 0px; padding: 0px;
-            
         }
+
+                /* A explicação do porquê os elementos serem dispostos de tal forma na tela se dá por meio dos comentários explicativos de cada estilização utilizada.Aquelas que não constam explicação, são similares às questões 4a-display e 4b-display. */
 
         body{
             min-height: 100vh;
         }
 
         .box{
+
             border: 1px solid black;
             box-sizing: border-box;
             display: inline-block;
@@ -29,14 +31,20 @@
 
         #box3{
             background-color: blue;
-            position: fixed;
-            top: 0px;
+
+            position: fixed; /* Determina que independentemente se ouver rolagem na tela (o que não será o caso nessa criação), o elmeento continuará no mesmo lugar determinado para ele. Um exemplo de uso seria o menu em alguns sites, como o próprio Moodle*/
+
+            /* Os comando top e left determinam que o elemento com id box3 deve estar no topo(top) e também no lado esquerdo da tela(left), porque a distância é de 0 pixels.*/
+            top: 0px; 
             left: 0px;
         }
 
         #box2{
             background-color: green;
             position: fixed;
+
+            /* Os comando right e bottom determinam que o elemento com id box2 deve estar na parte inferior da tela(bottom) e também no lado direito (right), porque a distância é de 0 pixels.*/
+
             right: 0px;
             bottom: 0px;
         }
@@ -44,36 +52,52 @@
         #rocket{
             
             position: fixed;
-            font-size: 3em;
+            font-size: 3em; /* Determina o tamanho do elemento, que não é uma imagem. */
+            
+            /* Aqui, o left e o bottom irão determinar onde o foguete estará inicialmente, ou seja, no lado esquerdo(left) e na parte inferior (bottom) */
             left: 0px;
             bottom: 0px;
-            animation: lancamento 10s ease-in 0s infinite;
+
+            animation: lancamento 10s ease-in 0s infinite; /* Determina que o elemento com id rocket irá utilizar a animacao lancamento, sua duração será de 10 segundos e haverá aceleração do elemento (easy-in), além disso,  se repetirá infinatamente (infinite) e sem tempo de espera (0s). */
         }
 
         #box4{
+
             background-color: yellow;
             position: fixed;
+
+            /* Right e top determinam que o elemento com id box deve estar no lado direito e no topo*/
             right: 0px;
             top: 0px;
+
             /**animation: name duration timing-function delay iteration-count direction fill-mode;*/
-            animation: rotacao 5s linear 0s infinite
+            animation: rotacao 5s linear 0s infinite /* Determina que o elemento com id box4 deve utilizar a animação rotacao, sua duração final será de 5 segundos, a velocidade da animação será constante (linear) e se repetirá infinatamente (infinite) e sem tempo de espera (0s). */
         }
 
         #box5{
             background-color: magenta;
             position: fixed;
+
+            /* O top e o left determinam que o elemento com id box5 deve estar com uma distância de 50% da margem. */
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+
+            transform: translate(-50%, -50%); /*Faz o elemento se mexer somente metado do seu tamanho, ou seja, muda o ponto de ancoragem, que seria na quina superior esquerda, e usa de fato o centro do elemento.*/
         }
 
         @keyframes rotacao {
+
+            /* Isso cria uma animação, na qual o ínicio (0%) é o seu estado normal e o final é uma volta com 360° */
             0%{}
 
             100%{transform: rotate(360deg);}
         }
 
         @keyframes lancamento {
+
+            /* Aqui se cria a animação utilizada no foguete. 
+            Em 0% o foguete é posicionado no canto inferior da tela.
+            Em 100% (no final) ele deve estar com uma distância de 700 pixels do inferior e 1000 pixels de distância do lado esquerdo.*/
 
             0%{
                 bottom: 0px;
@@ -86,14 +110,11 @@
             
         }
 
-
-
     </style>
 
 </head>
 <body>
 
-<!--Deixar um do lado do outro para não ter espaços entre os blocos-->
 <div id="rocket" class="rocket">🚀</div>
 <div id="box2" class="box">2</div>
 <div id="box3" class="box">3</div>

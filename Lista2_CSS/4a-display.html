@@ -6,20 +6,25 @@
     <title>4a-Display</title>
 
     <style>
+        
         /**reset CSS */
         *{margin: 0px; padding: 0px;}
 
+        /* A explicação do porquê os elementos serem dispostos de tal forma na tela se dá por meio dos comentários explicativos de cada estilização utilizada. */
+
         body{
-            border: 1px solid red;
-            min-height: 100vh;
+            border: 1px solid red; /* Faz uma borda ao redor de todos os elementos que estão dentro do body.*/
+            min-height: 100vh; /* Determina que a borda criada ocupe no mínimo toda a altura da tela (o vh conta como uma porcentagem, assim, como está 100, ocupa toda a tela) */
         }
 
         .box{
-            border: 1px solid black;
-            height: 25vh;
-            text-align: center;
-            line-height: 25vh;
+            border: 1px solid black; /* Determina que cada box tenha uma borda de linha contínua, preta e de 1 pixel de espessura */
+            height: 25vh; /* Determina que a altura do box deve ocupar 25% da tela, como são quatro box, eles ocupam a tela toda. */
+            text-align: center; /* Determina que o texto deva estar alinhado ao centro*/
+            line-height: 25vh; /* Determina que a altura do texto deve ser equivalente à 25% da altura total da tela, nesse caso, fará com que o texto fique centralizado verticalmente dentro de cada box, porque elas também utilizam 25% da tela cada.   */
         }
+
+        /* Os comandos seguintes determinam a cor de cada box utilizando o seu id. */
 
         #box1{
             background-color: blue;

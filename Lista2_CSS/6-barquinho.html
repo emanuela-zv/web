@@ -7,13 +7,43 @@
 
     <style>
 
+        *{margin: 0px; padding: 0px;}
         #barco{
+            position: absolute;
+            z-index: 2;
             display: inline-block;
             font-size: 100px;
+            left: 0;
+            bottom: 0;
+            animation:navegando 10s ease-in infinite;
+
         }
-        #mar{
-            width: 100vw;;
+
+        #ceu.box{
+        
+            width: 100vw;   /* Largura total da tela */
+            height: 100vh;   /* Metade da altura da tela */
+            
+            background: linear-gradient(lightblue,lightseagreen);
+            
+            /* Posicionando o "mar" na metade de baixo */
+            position: fixed;
+            bottom: 0;
         }
+
+            @keyframes navegando{
+
+        0%{}
+
+        40%{transform:rotate(0deg);}
+        50%{ left:50vw;
+            transform: rotate(-60deg);
+        }
+        100%{
+            transform: rotate(-45deg);
+            bottom:100vh;
+        }
+    }
 
     </style>
 
@@ -21,7 +51,10 @@
 <body>
 
     <span id="barco">🚤</span>
-    <img id="mar" src="../imgs/marDesenho.jpg" alt="">
+
+    <div class="box" id="ceu"></div>
+
+
     
 </body>
 </html>

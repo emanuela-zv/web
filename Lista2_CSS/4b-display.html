@@ -13,12 +13,14 @@
             min-height: 100vh;
         }
 
+        /* A explicação do porquê os elementos serem dispostos de tal forma na tela se dá por meio dos comentários explicativos de cada estilização utilizada.Aquelas que não constam explicação, são similares à questão 4a-display. */
+        
         .box{
             border: 1px solid black;
-            box-sizing: border-box;
+            box-sizing: border-box; /* Define que o tamanho final do box será o tamanho definido (o height e o width)*/
             height: 40vh;
-            width: 25vw;
-            display: inline-block;
+            width: 25vw; /*Determina que o box deve usar 25% da largura da tela (devido ao vw)*/
+            display: inline-block; /* Define que o box deve ser posicionado um ao lado do outro e também em blocos. Ou seja, quando acabar o espaço na linha, o próximo elemento deve ir para a linha de baixo e não continuar para o lado como um scroll.*/
             text-align: center;
             line-height: 40vh;
         }
@@ -45,7 +47,6 @@
 </head>
 <body>
 
-<!--Deixar um do lado do outro para não ter espaços entre os blocos-->
 <div id="box1" class="box">1</div><div id="box2" class="box">2</div><div id="box3" class="box">3</div><div id="box4" class="box">4</div>
     
 </body>

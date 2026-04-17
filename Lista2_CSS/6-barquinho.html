@@ -8,42 +8,91 @@
     <style>
 
         *{margin: 0px; padding: 0px;}
+
         #barco{
             position: absolute;
             z-index: 2;
             display: inline-block;
             font-size: 100px;
             left: 0;
-            bottom: 0;
-            animation:navegando 10s ease-in infinite;
+            bottom: 10vw;
+            animation:navegando 10s linear infinite;
+            transform: scaleX(-1);
 
         }
 
         #ceu.box{
-        
-            width: 100vw;   /* Largura total da tela */
-            height: 100vh;   /* Metade da altura da tela */
+            position: absolute;
+            width: 100vw;   
+            height: 100vh;   
+            z-index: 1;
             
             background: linear-gradient(lightblue,lightseagreen);
             
-            /* Posicionando o "mar" na metade de baixo */
-            position: fixed;
-            bottom: 0;
         }
 
-            @keyframes navegando{
+        #nuvem.box{
+            position: absolute;
+            z-index: 3;
+            display: inline-block;
+            left: 0;
+            top: 5vw;
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+            border-radius: 50px;
 
-        0%{}
+            box-shadow:
+            100px 0 antiquewhite,
+            50px 50px antiquewhite,
+            120px 40px antiquewhite,
+            160px -5px antiquewhite,
+            30px -50px antiquewhite,
+            110px -50px antiquewhite;
 
-        40%{transform:rotate(0deg);}
-        50%{ left:50vw;
-            transform: rotate(-60deg);
+            animation: nuvem 20s linear infinite;
         }
-        100%{
-            transform: rotate(-45deg);
-            bottom:100vh;
+
+        .mar{
+            
         }
-    }
+
+        @keyframes navegando {
+            
+            0% {
+                left: -200px;
+                transform: rotate(-5deg) scaleX(-1);
+            }
+
+            20% {
+                transform: rotate(8deg) scaleX(-1);
+            }
+
+            40% {
+                transform: rotate(-6deg) scaleX(-1);
+            }
+
+            60% {
+                transform: rotate(7deg) scaleX(-1);
+            }
+
+            80%{
+                transform: rotate(-5deg) scaleX(-1);
+            }
+
+            100% {
+                left: 100vw;
+                transform: rotate(5deg) scaleX(-1);
+            }
+        }
+        @keyframes nuvem {
+            0%{}
+            100%{
+                left: 100vw;
+            }
+
+            
+        }
 
     </style>
 
@@ -53,6 +102,8 @@
     <span id="barco">🚤</span>
 
     <div class="box" id="ceu"></div>
+    <div class="box" id="nuvem"></div>
+    <div class="mar"></div>
 
 
     

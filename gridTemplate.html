@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template</title>
+
+    <style>
+
+
+        .container{
+            display: grid;
+            height: 100vh;
+
+            grid-template-areas:"header header header header"
+                                "main main empty sidebar"
+                                "footer footer footer footer";            
+        }
+
+        @media (max-width:500px) {
+       .container{
+            display: grid;
+            height: 100vh;
+            
+            grid-template-areas:"header"
+                                "main"
+                                "empty"
+                                "sidebar"
+                                "footer";            
+        }
+
+            
+        }
+
+
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 25px;
+            font-size: 2em;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: 10px 10px 20px  gray;
+            
+        }
+        #box1{
+            grid-area: header;
+            background-color: rgba(255, 166, 0, 0.479);
+        }
+        #box2{
+            grid-area: main;
+            background-color: lightblue;
+        }
+        #box3{
+            grid-area: empty;
+            
+        }
+        #box4{
+            grid-area: sidebar;
+            background-color: lightcoral;
+        }
+        #box5{
+            grid-area: footer;
+            background-color: lightgreen;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box" id="box1">header</div>
+        <div class="box" id="box2">main</div>
+        <div class="box" id="box3">empty</div>
+        <div class="box" id="box4">sidebar</div>
+        <div class="box" id="box5">footer</div>
+    </div>
+
+
+    
+
+    
+</body>
+</html>

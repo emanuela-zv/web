@@ -1,59 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout com hover</title>
 
     <style>
-
-     *{margin: 0px; padding: 0px;}
-
-        .container{
-
-            flex-direction: row;
-            display: flex;
-            height: 100vh;
-            position: relative;
-            flex-grow: 5;
-            justify-content: space-around;
-            
+        * {
+            margin: 0px;
+            padding: 0px;
         }
 
-        .box:hover{
+        body {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        .container {
+
+            display: flex;
+            width: 95vw;
+            height: 80vh;
+            gap: 15px;
+
+        }
+
+        .box {
             position: relative;
-            background-color: rgb(233, 10, 10);
-            flex-grow: 5;
+            flex: 1;
+            border-radius: 50px;
+            background-size: cover;
+            background-position: center;
             transition: all 3s;
         }
 
-        img{
-            width: 80%;
-            border-radius: 25%;
-            justify-content: center;
+        .box:hover {
+            flex: 5;
         }
 
-        #box1{
+        .icone {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
 
+        }
+
+        .boxComp {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .box:hover .boxComp {
+            opacity: 0;
+        }
+
+        .boxExp {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease 0.3s;
+        }
+
+        .box:hover .boxExp {
+            opacity: 1;
+        }
+
+        #condado {
+            background-image: url('imgsLista3/ahh, o condado.jpg');
+        }
+
+        #argonath {
+            background-image: url('imgsLista3/argonath.jpg');
+        }
+
+        #isengard {
+            background-image: url('imgsLista3/isengard.jpg');
+        }
+
+        #minasTirith {
+            background-image: url('imgsLista3/minas Tirith.jpg');
+        }
+
+        #valfenda {
+            background-image: url('imgsLista3/Valfenda.jpg');
         }
     </style>
 
 </head>
+
 <body>
 
     <div class="container">
 
-        <div class="box" id="box1">
-            <img src="../imgs/frodo.jpg" alt="Frodo de braços abertos">
+        <div class="box" id="condado">
+            <div class="boxComp">
+                <div class="icone" id="iconeCondado">🍀</div>
+            </div>
+            <div class="boxExp">
+                <div class="icone" id="iconeCondado">🍀</div>
+                <div class="textExp">
+                    <h4>Condado</h4>
+                    <span>Vila dos Hobbits</span>
+                </div>
+            </div>
         </div>
-        <div class="box" id="box2">
-            <img src="../imgs/samwise.jpg" alt="Sam de braços abertos">
-        </div>
-        <div class="box" id="box3">3</div>
-        <div class="box" id="box4">4</div>
-        <div class="box" id="box5">5</div>
 
+        <div class="box" id="argonath">
+            <div class="boxComp">
+                <div class="icone" id="iconeArgonath">🗿</div>
+            </div>
+            <div class="boxExp">
+                <div class="icone" id="iconeArgonath">🗿</div>
+                <div class="textExp">
+                    <h4>Argonath</h4>
+                    <span>Estátuas de Isildur e Anárion</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="box" id="isengard">
+            <div class="boxComp">
+                <div class="icone" id="iconeIsengard">⛰️</div>
+            </div>
+            <div class="boxExp">
+                <div class="icone" id="iconeIsengard">⛰️</div>
+                <div class="textExp">
+                    <h4>Isengard</h4>
+                    <span>Sul das Montanhas Sombrias</span>
+                </div>
+            </div>
+        </div>
+        <div class="box" id="minasTirith">
+            <div class="boxComp">
+                <div class="icone" id="iconeTirith">🌄</div>
+            </div>
+            <div class="boxExp">
+                <div class="icone" id="iconeTirith">🌄</div>
+                <div class="textExp">
+                    <h4>Minas Tirith</h4>
+                    <span>Capital de Gondor</span>
+                </div>
+            </div>
+        </div>
+        <div class="box" id="valfenda">
+            <div class="boxComp">
+                <div class="icone" id="iconeValfenda">🏞️</div>
+            </div>
+            <div class="boxExp">
+                <div class="icone" id="iconeTValfenda">🏞️</div>
+                <div class="textExp">
+                    <h4>Valfenda</h4>
+                    <span>O último lugar seguro</span>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
+
 </html>

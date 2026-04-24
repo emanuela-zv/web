@@ -1,100 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copia de layout</title>
+    <title>Questao 1 Lista 3</title>
 
     <style>
 
-        body{
+        body {
             display: flex;
-            margin: 0%;
-            background-color: lightgray;
             justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+
+            display: flex;
+            width: 20vw;
+            height: 80vh;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid purple;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+    
+        }
+
+        .top, .bottom {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 15px;
+        }
+
+        .bottom{
+            margin-bottom: 20px;
+        }
+
+        .logo{
+            color: gray;
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        .container{
+        .boxes {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
-            background-color: white;
-            border: 1px solid gray;
-            border-radius: 2px;
-            box-shadow: 0 5px 10px gray;
-            width: 30vw;
-            height: 80vh;
-            
+            gap: 10px;
+            width: 80%;
         }
 
-        .pessoa{
-            
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            border-bottom: 1px solid lightgray;
+        .box {
+            background-color: lightgray;
+            width: 100%;
+            height: 5vh;
+            border-radius: 5px;
         }
 
-        .pessoa:last-child{
-            border-bottom: 0px ;
-        }
-
-        img{
-
-            width: 80px;
-            height: 80px;
+        .circulo {
+            background-color: lightgray;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-        span{
-            color: rgb(119, 119, 119)
         }
 
+        .ret {
+            background-color: lightgray;
+            width: 40%;
+            height: 5vh;
+            border-radius: 5px;
+        }
 
+        #retSup {
+
+            width: 100%;
+            height: 2vh;
+            border-radius: 0%;
+
+        }
     </style>
 
 </head>
+
 <body>
 
     <div class="container">
 
-        <div class="pessoa" id="aragorn"> <img src="imgsLista3/aragorn.png" alt="Aragorn"> 
-            <div class="informacoes">
-                <p><b>Aragorn filho de Arathorn</b></p>
-                <span>2931  Valfenda</span>
-            </div> 
-            
-        </div>
+        <div class="top">
+            <div class="box" id="retSup"></div>
+            <div class="logo">Company Logo</div>
 
-        <div class="pessoa" id="arwen"> <img src="imgsLista3/arwen.jpg" alt="Arwen"> 
-            <div class="informacoes">
-                <p><b>Arwen Undómiel</b></p>
-                <span>241 Rivendell</span>
-            </div>
-            
-        </div>
-
-        <div class="pessoa" id="legolas"> <img src="imgsLista3/legolas.jpg" alt="Legolas"> 
-            <div class="informacoes">
-                <p><b>Legolas Greenleaf</b></p>
-                <span>87 Treva Mata</span>
+            <div class="boxes">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
             </div>
         </div>
 
-        <div class="pessoa" id="gimli"> <img src="imgsLista3/gimli.jpg" alt="Gimli">
-            <div class="informacoes">
-                <p><b>Gimli filho de Glóin</b></p>
-                <span>2879 Monstanhas Azuis</span>
-            </div>
-        
+        <div class="bottom">
+            <div class="circulo"></div>
+            <div class="ret"></div>
         </div>
 
     </div>
 
 
-
-    
 </body>
+
 </html>

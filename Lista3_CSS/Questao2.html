@@ -7,16 +7,51 @@
 
     <style>
 
-        img{
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+        body{
+            display: flex;
+            margin: 0%;
+            background-color: lightgray;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        #aragorn{
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color: white;
+            border: 1px solid gray;
+            border-radius: 2px;
+            box-shadow: 0 5px 10px gray;
+            width: 30vw;
+            height: 80vh;
             
-            background-size: 100px;
         }
+
+        .pessoa{
+            
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid lightgray;
+        }
+
+        .pessoa:last-child{
+            border-bottom: 0px ;
+        }
+
+        img{
+
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        span{
+            color: rgb(119, 119, 119)
+        }
+
 
     </style>
 
@@ -25,10 +60,36 @@
 
     <div class="container">
 
-        <div id="aragorn"> <img src="../imgs/aragorn.png" alt="Aragorn"></div>
-        <div id="arwen"> <img src="../imgs/arwen.jpg" alt="Arwen"></div>
-        <div id="gandalf"> <img src="../imgs/gandalf.jpg" alt="Gandalf"></div>
-        <div id="bilbo"> <img src="../imgs/bilbo.png" alt=""></div>
+        <div class="pessoa" id="aragorn"> <img src="imgsLista3/aragorn.png" alt="Aragorn"> 
+            <div class="informacoes">
+                <p><b>Aragorn filho de Arathorn</b></p>
+                <span>2931  Valfenda</span>
+            </div> 
+            
+        </div>
+
+        <div class="pessoa" id="arwen"> <img src="imgsLista3/arwen.jpg" alt="Arwen"> 
+            <div class="informacoes">
+                <p><b>Arwen Undómiel</b></p>
+                <span>241 Rivendell</span>
+            </div>
+            
+        </div>
+
+        <div class="pessoa" id="legolas"> <img src="imgsLista3/legolas.jpg" alt="Legolas"> 
+            <div class="informacoes">
+                <p><b>Legolas Greenleaf</b></p>
+                <span>87 Treva Mata</span>
+            </div>
+        </div>
+
+        <div class="pessoa" id="gimli"> <img src="imgsLista3/gimli.jpg" alt="Gimli">
+            <div class="informacoes">
+                <p><b>Gimli filho de Glóin</b></p>
+                <span>2879 Monstanhas Azuis</span>
+            </div>
+        
+        </div>
 
     </div>
 

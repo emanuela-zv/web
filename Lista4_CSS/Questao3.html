@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout com letras</title>
+
+    <style>
+
+        *{margin: 0%; padding: 0%;}
+        
+        .container{
+            display: grid;
+            grid-template-rows: 33.33vh 33.33vh 33.33vh;
+            grid-template-areas: "a a . b"
+                                 "c container2 container2 container2"
+                                 "c container2 container2 container2";
+            margin: 10px;
+            font-size: 3em;
+        }
+
+        .container2{
+            display: grid;
+            grid-template-rows: 50% 50%;
+            grid-template-areas: "e e f f f g g"
+                                 "m m i i i j j";
+            grid-area: container2;
+            background-color: rgb(66, 66, 66);
+            border-radius: 10px;
+            margin: 20px;
+            color: rgb(66, 66, 66)
+            
+        }
+
+        .box{
+
+            background-color: rgb(185, 185, 185);
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+
+        }
+
+        #a{
+            grid-area: a;
+            background-color: rgb(66, 66, 66);
+            color: white;
+        }
+        #b{
+            grid-area: b;
+            background-color: rgb(66, 66, 66);
+            color: white;
+        }
+        #c{
+            grid-area: c;
+            background-color: rgb(66, 66, 66);
+            color: white;
+        }
+        #e{
+            grid-area: e;
+        }
+        #f{
+            grid-area: f;
+        }
+        #g{
+            grid-area: g;
+        }
+        #m{
+            grid-area: m;
+        }
+        #i{
+            grid-area: i;
+        }
+        #j{
+            grid-area: j;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="container2">
+            <div class="box" id="e">E</div>
+            <div class="box" id="f">F</div>
+            <div class="box" id="g">G</div>
+            <div class="box" id="m">M</div>
+            <div class="box" id="i">I</div>
+            <div class="box" id="j">J</div>
+        </div>
+
+        <div class="box" id="a">A</div>
+        <div class="box" id="b">B</div>
+        <div class="box" id="c">C</div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsivo</title>
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .container {
+
+            background-color: rgb(235, 235, 235);
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 1.2em;
+            display: grid;
+            grid-template-rows: 10vh 10vh 60vh 10vh 10vh;
+            grid-template-columns: 20vw 60vw 20vw;
+            grid-template-areas: "header header header"
+                "leftA banner rightA"
+                "leftA mainC rightA"
+                "leftA lowC rightA"
+                "footer footer footer";
+
+        }
+
+        @media (max-width:500px) {
+
+            .container {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 10vh 10vh 10vh 40vh 10vh 10vh 10vh;
+
+                grid-template-areas: "header"
+                    "banner"
+                    "leftA"
+                    "mainC"
+                    "rightA"
+                    "lowC"
+                    "footer";
+            }
+        }
+
+
+
+        .box {
+            margin: 5px;
+        }
+
+        #header,
+        #banner,
+        #footer,
+        #mainC {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #leftA,
+        #rightA {
+            padding: 20px;
+
+        }
+
+        #header {
+            background-color: rgb(255, 196, 0);
+            grid-area: header;
+        }
+
+        #banner {
+            background-color: rgb(184, 0, 0);
+            grid-area: banner;
+        }
+
+        #leftA {
+            background-color: rgb(36, 100, 68);
+            grid-area: leftA;
+        }
+
+        #mainC {
+            background-color: rgb(0, 121, 177);
+            grid-area: mainC;
+        }
+
+        #rightA {
+            background-color: rgb(255, 196, 0);
+            grid-area: rightA;
+        }
+
+        #lowC {
+            background-color: rgb(36, 100, 68);
+            grid-area: lowC;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        #footer {
+            background-color: rgb(0, 121, 177);
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box" id="header">Header</div>
+        <div class="box" id="banner">Banner</div>
+        <div class="box" id="leftA">Left Aside</div>
+        <div class="box" id="mainC">Main Content</div>
+        <div class="box" id="rightA">Right Aside</div>
+        <div class="box" id="lowC">Low Content</div>
+        <div class="box" id="footer">Footer</div>
+    </div>
+
+
+</body>
+
+</html>

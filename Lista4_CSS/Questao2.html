@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout de estrutura</title>
 
     <style>
+        * {
+            margin: 0%;
+        }
+
+        .container {
+
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 20vh 70vh 10vh;
+            grid-template-areas: "header header header"
+                "nav contentBox contentBox"
+                "footer footer footer";
+        }
         
+
+        .box {
+            border: 2px solid black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 250%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #box1 {
+            border: 2px solid black;
+            grid-area: header;
+            align-items: center;
+            background-color: rgba(226, 29, 121, 0.774);
+        }
+
+        #box2 {
+            grid-area: nav;
+            align-items: center;
+            background-color: rgba(255, 255, 49, 0.795);
+        }
+
+        #box3 {
+            grid-area: contentBox;
+            background-color: rgba(231, 150, 0, 0.623);
+        }
+
+        #box4 {
+            grid-area: footer;
+            align-items: center;
+            background-color: rgba(26, 26, 182, 0.774);
+        }
     </style>
 </head>
+
 <body>
 
     <div class="container">
@@ -17,6 +65,7 @@
         <div class="box" id="box3">Content</div>
         <div class="box" id="box4">Footer</div>
     </div>
-    
+
 </body>
+
 </html>

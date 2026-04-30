@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site responsivo com links</title>
+
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .container {
+
+            display: grid;
+            grid-template-columns: 40% 25% 25% 10%;
+            grid-template-rows: 35% 10% 35% 20%;
+            width: 100vw;
+            height: 100vh;
+            grid-template-areas: "web html css css"
+                "web html flex grid"
+                "animate html flex grid"
+                "position position flex grid";
+
+        }
+
+        @media(max-width: 599px) {
+            .container {
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 14% 14% 14% 14% 14% 14% 14%;
+                grid-template-areas: "web"
+                    "html"
+                    "css"
+                    "animate"
+                    "flex"
+                    "position"
+                    "grid";
+            }
+
+
+        }
+
+        a {
+            margin: 5px;
+        }
+
+        #box1 {
+            background-color: coral;
+            grid-area: web;
+
+        }
+
+        #box2 {
+            background-color: lightpink;
+            grid-area: html;
+        }
+
+        #box3 {
+            background-color: lightblue;
+            grid-area: css;
+        }
+
+        #box4 {
+            background-color: lightcyan;
+            grid-area: animate;
+        }
+
+        #box5 {
+            background-color: rgb(255, 172, 48);
+            grid-area: position;
+        }
+
+        #box6 {
+            background-color: lightgreen;
+            grid-area: flex;
+        }
+
+        #box7 {
+            grid-area: grid;
+        }
+
+        .container2 {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+
+        }
+
+        #box-1 {
+            background-color: orange;
+        }
+
+        #box-2 {
+            background-color: aqua;
+
+        }
+
+        #box-3 {
+            background-color: black;
+
+        }
+
+        #box-4 {
+            background-color: blueviolet;
+
+        }
+
+        .circulo {
+            height: 90px;
+            width: 90px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <a id="box1" href="https://pt.wikipedia.org/wiki/World_Wide_Webz">
+            <div class="box"> </div>
+        </a>
+        <a id="box2" href="https://www.w3schools.com/html/">
+            <div class="box"></div>
+        </a>
+        <a id="box3" href="https://www.w3schools.com/css/">
+            <div class="box"></div>
+        </a>
+        <a id="box4" href="https://www.w3schools.com/css/css3_animations.asp">
+            <div class="box"></div>
+        </a>
+        <a id="box5" href="https://www.w3schools.com/css/css_position.asp">
+            <div class="box"></div>
+        </a>
+        <a id="box6" href="https://www.w3schools.com/css/css3_flexbox.asp">
+            <div class="box"></div>
+        </a>
+        <a id="box7" href="https://www.w3schools.com/css/css_grid.asp">
+            <div class="container2">
+                <div class="circulo" id="box-1"></div>
+                <div class="circulo" id="box-2"></div>
+                <div class="circulo" id="box-3"></div>
+                <div class="circulo" id="box-4"></div>
+            </div>
+        </a>
+
+    </div>
+
+</body>
+
+</html>

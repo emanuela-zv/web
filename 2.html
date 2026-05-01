@@ -75,25 +75,26 @@
 
         &ltbody&gt
 
-        &ltp id=1&gt Parágrafo com cor vermelha  &lt/p&gt
+        &ltp id="p1"&gt Parágrafo com cor vermelha  &lt/p&gt
 
         &lt/body&gt
+        
     </pre>
 
     <p>E como resultado, temos: </p>
-    <p id=p1> Parágrafo com cor vermelha </p>
+    <p id="p1"> Parágrafo com cor vermelha </p>
 
-    <p>Desta forma, o #p1 é o seletor, o qual define <i>o que</i> será estilizado.
-        <br> Neste caso, foi utilizado um id para o elemento parágrafo, por isso antes do nome do seletor, foi posto #.
-        <br>Para estilizar classes, deve-se colocar . (ponto) antes do nome dela.
+    <p>Desta forma, o # é o seletor. Ao utiliza-lo, define-se que será estilizado algum elemento que possua id (nesse caso, o id é p1), e o seletor define <i>o que</i> será estilizado.
+        <br>Para estilizar classes, deve-se utilizar o . (ponto) como seletor e em seguida o nome dela.
+        <br>Para tags, usa-se somente a tag como seletor. 
+        <br>Para estilizar tudo, de forma generalizada, usa-se o *;
     </p>
 
     <p>Conforme o caso, a propriedade utilizada foi <b>color</b> e seu valor foi <b>red</b>. Ou seja, a propriedade é
         <i>o que</i> irá ser <i>feito</i> e o valor define <i>como</i> será feito, a forma como será estilizado.
     </p>
 
-    <p>Além disso, existem formas de estilizar um estado específico do seletor, como quando se passa o mouse por cima do
-        seletor ou uma determinada linha dele. <br>Para isso, podem ser usados: </p>
+    <p>Além disso, existem formas de estilizar um estado ou parte específica do seletor, como quando se passa o mouse por cima dele ou uma determinada linha do mesmo. <br>Para isso, podem ser usados: </p>
 
     <ul>
         <li>Pseudo Classes</li>

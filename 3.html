@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandeiras</title>
+
+    <style>
+
+        *{padding: 0; margin: 0;}
+
+        body{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(216, 216, 216);
+        }
+
+        .franca {
+            display: grid;
+            width: 33vw;
+            height: 50vh;
+            grid-template-areas: "azulF brancoF vermelhoF";
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.493);
+            border: 0.5px solid lightgray;
+
+        }
+        .alemanha{
+            display: grid;
+            width: 33vw;
+            height: 50vh;
+            grid-template-areas: "pretoA" "vermelhoA" "amareloA";
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.493);
+            border: 0.5px solid lightgray;
+        }
+
+        .japao{
+            display: flex;
+            width: 33vw;
+            height: 50vh;
+            background-color: white;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.493);
+            border: 0.5px solid lightgray;
+            
+        }
+
+        /*França*/
+
+        #azulF {
+            background-color: rgb(0, 0, 146);
+            grid-area: azulF;
+
+
+        }
+
+        #brancoF {
+            background-color: white;
+            grid-area: brancoF;
+
+        }
+
+        #vermelhoF {
+            background-color: rgb(175, 0, 0);
+            grid-area: vermelhoF;
+
+        }
+
+        /*Alemanha*/
+
+        #pretoA{
+            background-color: black;
+            grid-area: pretoA
+        }
+        #amareloA{
+            background-color: yellow;
+            grid-area: amareloA;
+        }
+        #vermelhoA{
+            background-color: red;
+            grid-area: vermelhoA;
+        }
+
+        /*Japão*/
+
+        #vermelhoJ{
+            background-color: rgb(163, 0, 0);
+            height: 180px;
+            width: 180px ;
+            border-radius: 50%;
+            
+            
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="franca">
+        <div id="azulF"></div>
+        <div id="brancoF"></div>
+        <div id="vermelhoF"></div>
+    </div>
+    <div class="alemanha">
+        <div id="pretoA"></div>
+        <div id="vermelhoA"></div>
+        <div id="amareloA"></div>
+    </div>
+    <div class="japao">
+        <div id="vermelhoJ"></div>
+    </div>
+
+</body>
+
+</html>

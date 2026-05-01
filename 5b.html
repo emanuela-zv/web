@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout responsivo</title>
+
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .container {
+
+            display: grid;
+            grid-template-columns: 40% 25% 25% 10%;
+            grid-template-rows: 35% 10% 35% 20%;
+            width: 100vw;
+            height: 100vh;
+            grid-template-areas: "amarelo rosa azul azul"
+                "amarelo rosa verde bolinhas"
+                "azul2 rosa verde bolinhas"
+                "amarelo2 amarelo2 verde bolinhas";
+
+        }
+
+        @media(max-width: 599px) {
+            .container {
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 10% 10% 10% 10% 10% 10% 40%;
+                grid-template-areas: "amarelo"
+                    "rosa"
+                    "azul"
+                    "verde"
+                    "azul2"
+                    "amarelo2"
+                    "bolinhas";
+            }
+        }
+
+        .box {
+            margin: 5px;
+        }
+
+        #box1 {
+            background-color: rgb(255, 187, 60);
+            grid-area: amarelo;
+
+        }
+
+        #box2 {
+            background-color: lightpink;
+            grid-area: rosa;
+        }
+
+        #box3 {
+            background-color: lightblue;
+            grid-area: azul;
+        }
+
+        #box4 {
+            background-color: rgb(146, 193, 255);
+            grid-area: azul2;
+        }
+
+        #box5 {
+            background-color: rgb(255, 206, 72);
+            grid-area: amarelo2;
+        }
+
+        #box6 {
+            background-color: lightgreen;
+            grid-area: verde;
+        }
+
+        #box7 {
+            grid-area: bolinhas;
+        }
+
+        .container2 {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+
+        }
+
+        #box-1 {
+            background-color: rgb(255, 182, 73);
+        }
+
+        #box-2 {
+            background-color: rgb(255, 181, 255);
+
+        }
+
+        #box-3 {
+            background-color: rgb(188, 255, 101);
+
+        }
+
+        #box-4 {
+            background-color: rgb(194, 130, 255);
+
+        }
+
+        .circulo {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+        <div class="box" id="box6"></div>
+
+
+        <div class="container2 " id="box7">
+            <div class="circulo" id="box-1"></div>
+            <div class="circulo" id="box-2"></div>
+            <div class="circulo" id="box-3"></div>
+            <div class="circulo" id="box-4"></div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

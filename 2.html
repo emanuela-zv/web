@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+
+    <style>
+        #p1 {
+            color: red;
+        }
+
+        h2:hover {
+            color: green;
+        }
+
+        pre:hover {
+            font-size: 1.5em;
+        }
+
+        ul li::marker {
+            color: blue;
+            font-size: 1.5em;
+        }
+
+        @keyframes mover {
+
+            0% {
+                top: 0px;
+                right: 0px;
+
+            }
+
+            100% {
+                top: 100vh;
+                right: 0vh;
+            }
+        }
+
+        #emoji {
+            display: inline-block;
+            position: fixed;
+            animation: mover 10s ease-in infinite;
+            font-size: 2em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <span id="emoji">👋</span>
+
+    <h2>O que é uma regra CSS?</h2>
+
+    <p>Uma regra CSS é uma forma criada para estilizar a página na web, a partir do uso de seletores, propriedades e
+        valores.</p>
+
+    <p>Para um exemplo prático e simples temos como código: </p>
+
+    <pre>
+
+        (demais estruturas)
+
+        &lthead&gt
+
+        &ltstyle&gt
+        #p1{
+            color: red;
+        }
+        &lt/style&gt
+
+        &lt/head&gt
+
+        &ltbody&gt
+
+        &ltp id=1&gt Parágrafo com cor vermelha  &lt/p&gt
+
+        &lt/body&gt
+    </pre>
+
+    <p>E como resultado, temos: </p>
+    <p id=p1> Parágrafo com cor vermelha </p>
+
+    <p>Desta forma, o #p1 é o seletor, o qual define <i>o que</i> será estilizado.
+        <br> Neste caso, foi utilizado um id para o elemento parágrafo, por isso antes do nome do seletor, foi posto #.
+        <br>Para estilizar classes, deve-se colocar . (ponto) antes do nome dela.
+    </p>
+
+    <p>Conforme o caso, a propriedade utilizada foi <b>color</b> e seu valor foi <b>red</b>. Ou seja, a propriedade é
+        <i>o que</i> irá ser <i>feito</i> e o valor define <i>como</i> será feito, a forma como será estilizado.
+    </p>
+
+    <p>Além disso, existem formas de estilizar um estado específico do seletor, como quando se passa o mouse por cima do
+        seletor ou uma determinada linha dele. <br>Para isso, podem ser usados: </p>
+
+    <ul>
+        <li>Pseudo Classes</li>
+        <li>Pseudo Elementos</li>
+    </ul>
+
+
+</body>
+
+</html>

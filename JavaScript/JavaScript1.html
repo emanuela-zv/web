@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        console.log("Number em js");
+        let idade=18;
+        console.log(idade);
+        console.log(typeof(idade));
+
+        console.log("String em js");
+        let nome="Lara";
+        console.log(nome);
+        console.log(typeof(nome));
+
+        console.log("Boolean em js");
+        let logico=true;
+        console.log(logico);
+        console.log(typeof(logico));
+
+
+        console.log("Variável não definida")
+        let variavelEsquecida;
+        console.log(typeof(variavelEsquecida))
+
+        console.log("Variável nula")
+        let telefone=null;
+        console.log(telefone);
+        console.log(typeof(telefone));
+
+        //Exemplos trabalhando com strings
+
+        console.log(`A ${nome} tem ${idade} anos`);
+
+        console.log(`<p>  <b>   ${nome} </b> tem <mark> ${idade} </mark> </p>`);
+        document.body.innerHTML=`<p>    <b>   ${nome} </b> tem <mark> ${idade} </mark> anos </p>`;
+
+        let dia=6;
+
+        switch(dia){
+
+            case 1: 
+                console.log("Domingo");
+                break;
+            
+            case 2: 
+                console.log("Segunda");
+                break;
+            
+            case 3:     
+                console.log("Terça-Feira");
+             break;
+            
+            case 4: 
+                console.log("Quarta-Feira");
+                break;
+            
+            case 5: 
+                console.log("Quinta-Feira");
+                break;
+            
+            case 6: 
+                console.log("Sexta-Feira");
+                break;
+            
+            case 7: 
+                console.log("Sábado");
+                break;
+            default: console.error("Dia inválido");
+
+        }
+
+        if(idade<12){
+            console.log("É uma criança!");
+        }
+        else if (idade<18){
+            console.log("É um adolescente.");
+        }else{
+            console.log(`É um adulto.Tem ${idade} anos`);
+        }
+
+        let nota=4;
+        if(nota<6){
+            console.log("Reprovado!");
+        } else if(nota<7){
+            console.log("Regular");
+        } else if(nota<9){
+            console.log("Boa");
+        }else{
+            console.log("Excelente");
+        }
+
+        console.clear()
+
+        for( let i=10; i>=0; i--){
+            console.log(`Contando ${i} segundos`);
+        }
+
+        console.clear()
+
+        let j=10;
+        
+        while(j>=0){
+            console.log(`Contando ${j} segundos`);
+            j--;
+        }
+
+        console.clear()
+
+        let soma=0;
+        for(let i=1; i<=50;i++){
+            //soma = soma+i;
+            soma +=i;
+        }
+        console.log(`A soma é ${soma}`)
+
+        function media(nota1,nota2){
+            return(nota1+nota2)/2;
+        }
+
+        let soma2= (a,b)=>{return a+b}
+        console.log(`Soma: ${soma2(10,20)}`)
+
+        document.body.addEventListener("click", ()=>(alert("O body foi clicado")))
+
+    </script>
+    
+</body>
+</html>

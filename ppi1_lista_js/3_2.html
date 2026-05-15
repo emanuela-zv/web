@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+    
+    <h1>Tabuada</h1>
+
+    <label for="ntabuada"></label>
+    <input type="number" id="ntabuada">
+
+    <button id="bt">Calcular</button>
+
+    <div id="tabuada"></div>
+
+    <script>
+
+        let botao=document.getElementById("bt");
+
+        botao.addEventListener("click", ()=>{
+
+            let n = Number(ntabuada.value);
+            
+            let strResult="";
+            for(let i=0; i<=10; i++){
+
+                p=document.createElement("p");
+                p.innerHTML=`${n} x ${i} = ${n*i}`;
+                p.style.color="#AABBCC"
+                //strResult+=`${n} x ${i} = ${n*i}<br>`;
+                  tabuada.appendChild(p);         
+            }
+            //tabuada.innerHTML=strResult;
+        })
+
+    </script>
+
+</body>
+</html>

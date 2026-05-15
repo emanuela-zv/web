@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #divsoma{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        #controlesoma{
+            display: flex;
+            
+
+        }
+        
+    </style>
+</head>
+<body>
+
+        <div id="divsoma">
+
+            <div>
+
+            <h1>Soma de números na interface</h1>
+            <label for="entradaA">A</label>
+            <input type="number" name="" id="entradaA">
+            
+            <label for="entradaB">B</label>
+            <input type="number" name="" id="entradaB">
+
+            <span>=</span>
+            <span id="Resultado"></span>
+            
+            </div>
+
+
+            <div id="controlesoma">
+                        
+                <input id=btn type="button" value="Somar">
+            </div>
+            
+        </div>
+        <script>
+            let a,b;
+            let inputA=document.querySelector("#entradaA");
+            let inputB=document.querySelector("#entradaB");
+            //let botao =document.querySelector("#btn");
+            let botao =document.getElementById("btn");
+
+            function soma(a,b){
+                return a+b;
+            }
+
+            botao.addEventListener("click", ()=>{
+
+                a=Number(inputA.value);
+                b=Number(inputB.value);
+
+                let soma=a+b;
+
+                let spanResult=document.querySelector("#Resultado");
+                spanResult.innerHTML=soma;
+
+            });
+
+
+
+            
+        </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Sorteio Intervalo</h1>
+
+    <label for="min">Insira um valor mínimo</label>
+    <input type="number" id="min">
+
+    <label for="max">Insira um valor máximo</label>
+    <input type="number" id="max">
+
+    <button id="bt">Sortear</button>
+
+    <div id="resultado"></div>
+
+    <script>
+
+        let botao=document.getElementById("bt");
+        min, max, resultado;
+
+        botao.addEventListener("click", ()=>{
+
+            let vmin =Number(min.value);
+            let vmax=Number(max.value);
+            let r = Math.random()*(vmax-vmin)+vmin;
+
+            let p = document.createElement("p");
+            
+            p.innerHTML = Math.trunc(r);
+            p.style.display="inline-block";
+            p.style.border= "1px solid black";
+            p.style.borderRadius="50%";
+            p.style.padding="10px";
+            p.style.margin="5px";
+            p.style.gap="1px";
+            
+            resultado.appendChild(p);
+        })
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <h1 style="border: 1px solid black;">Texto</h1>
+
+    <div tabIndex ="0" id="txt" style="border: 1px solid black; height:50vh;"></div>
+
+    <div id="status" style="border: 1px solid black; height: 1rem;"></div>
+
+    <canvas id="canvas" height="1080", width ="1920"> </canvas>
+
+    <script>
+
+        var tecla;
+        var mouse;
+        let txt = document.querySelector("#txt");
+        let status = document.querySelector("#status");
+        let canvas = document.querySelector("canvas");
+        var desenhando=false;
+        
+
+        txt.addEventListener('keypress', (a)=>{
+            tecla=a;
+            txt.innerHTML+=a.key
+             
+        });
+        txt.addEventListener('keydown', (e)=>{
+
+            if(e.key==="Backspace"){
+                //remover último caractere adicionado
+                txt.innerHTML=txt.innerHTML.slice(0,-1);
+            }
+        });
+
+        document.addEventListener('keydown', function(event){
+            status.innerHTML='Evento keypress: ' +event.key;
+
+        });
+
+        //capturando posicao do mouse
+        document.addEventListener('mousemove', (e)=>{
+            status.innerHTML='Posição do mouse: ' + e.clientX + ',' + e.clientY;
+        })
+
+        //desenhando com o mouse
+        let ctx=canvas.getContext('2d');
+        canvas.addEventListener('mousedown', (e)=>{
+            desenhando=!desenhando;
+            ctx.moveTo(e.offsetX, e.offsetY)
+
+        })
+        canvas.addEventListener('mouseup',(e)=>{
+            desenhando=!desenhando;
+        });
+        
+        document.addEventListener('mousemove', (e)=>{
+            mouse=e;
+            if(desenhando){
+            console.log("mouse" + e.offsetX + "," + e.offsetY);
+            
+            ctx.lineTo(e.offsetX,e.offsetY);
+            ctx.stroke();
+            }
+
+        })
+
+    </script>
+    
+</body>
+</html>

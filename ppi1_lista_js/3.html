@@ -4,22 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="">
 </head>
 <body>
 
+    <h1>JS</h1>
+
+    <div>
+        <p>Tipos primitivos do JS</p>
+        <ul>
+            <li>String</li>
+            <li>Number</li>
+            <li>Undefined</li>
+            <li>Boolean</li>
+            <li>Null</li>
+        </ul>
+
+        <p>Como declarar variáveis</p>
+        <p>Usamos let ou var para declarar variáveis</p>
+        <code class="language-javacript">
+            var nome; //cria umma variável global com identificador nome
+            let idade; //cria uma variável local com identificador idade
+        </code>
+
+        <p>Funções em JavaScript</p>
+        <code class="language-javacript">
+            function nomeDaFuncao(){
+                //código da função
+            }
+
+            ()=>{
+                //código da função anônima
+            }
+
+        </code>
+
+        <div>
+            <p>Tratamento de Evenetos em JavaScript</p>
+
+            <p>Tratamos eventos em JS usando <code>addEventListener</code> que vincula uma função a um eveneto específico do DOM. </p>
+            <p>Exemplo:</p>
+            <code class="language-javascript">
+                documento.addEventListener('click', function(){
+                    console.log('Clique detectado');
+                });
+            </code>
+
+            <p>Eventos comuns disponíveis nos Navegadores</p>
+            <ul>
+                <li>click - evento de clique</li>
+                <li>mouseover - evento de mouse sobre o elemento</li>
+                <li>mouseout - evento de mouse fora do elemento</li>
+                <li>mousenter - evento do mouse entrando no elemento</li>
+                <li>keypress - evento de tecla pressionada caracteres visíveis ASCII</li>
+                <li>keydown - evento de tecla pressionada</li>
+                <li>keyup - evento de tecla solta</li>
+                <li>submit - evento de envio de formulário da tag form</li>
+                <li>DOMContentLoaded - evento disparado quando o documento HTML é completamente carregado e parseado</li>
+                <li>change - evento disparado quando o valor de um elemento de formulário é alterado</li>
+            </ul>
+        </div>
+    </div>
     <script>
-        let nome= prompt("Informe o seu nome: ", "Emanuela");
-        alert("Olá " + nome);
 
-        let a=prompt("Informe o valor de a");
-        let b=prompt("Informe o valor de b");
+        document.addEventListener('keypress', function(event){
+            console.log('Evento keypress: ' + event.key);
+        });
+        document.addEventListener('keydown', function(event){
+            console.log('Evento keydown: ' + event.key);
+        });
+        
+        if(true){
+            var nome = "João";
+            let idade = 30;
+        }
+        console.log(nome); //Imprime João
+        //console.log(idade); //Erro: idade is not defined
 
-        const numero1=Number(a);
-        const numero2=parseInt(b);
+        function soma(a,b){
+            return a+b;
+        }
 
-        const soma=numero1+numero2;
-        alert(soma);
+        //definindo uam função que só recebe inteiro
 
+        function somaInteiros(a,b){
+            if(Number.isInteger(a) && Number.isInteger(b)){
+                return a+b;
+            }
+            else{
+                throw new Error("Os argumentos devem ser valores inteiros!");
+            }
+        }
+
+        //Declaramos uma função para escrever uma mensagem
+        function tratamentoMouseOver(){
+            console.log("mouse sobre o corpo do documento");
+        }
+        
+        //vinculamos a função ao evento mouseover do corpo do documento
+        document.body.addEventListener('mouseover',tratamentoMouseOver);
+
+        document.body.addEventListener('mousenter',()=> {console.log("mouse entrou no corpo do documento")});
+        document.body.addEventListener('mouseout', ()=>{console.log("mouse saindo do corpo do documenmto.")});
+        
     </script>
 </body>
 </html>

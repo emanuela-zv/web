@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cor de fundo</title>
+
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            background-color: black;
+            justify-content: center;
+            align-items: center;
+        }
+        #btMudarCor{
+            height: 100px;
+            width: 400px;
+            font-size: 2em;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btMudarCor">Clique para mudar a cor do fundo!</button>
+
+    <script>
+
+        let btMudarCor = document.getElementById("btMudarCor");
+
+        function randColor(){
+            let color = Math.random()*255;
+            return color.toFixed(0);
+        }
+
+        btMudarCor.addEventListener("click", ()=>{
+            document.body.style.backgroundColor = "rgb("+randColor()+", "+randColor()+", "+randColor()+")";        
+
+        })
+    </script>
+    
+</body>
+</html>

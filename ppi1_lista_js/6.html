@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Primos</title>
+</head>
+<body>
+
+    <label for="">Número inicio</label>
+    <input type="number" id="inicio">
+
+    <label for="">Número final</label>
+    <input type="number" id="fim">
+
+    <button id="verificar">Verificar</button>
+
+    <div id="resultadoPrimos"></div>
+
+    <script>
+
+        let verificar = document.getElementById("verificar");
+        let inicioI = document.querySelector("#inicio");
+        let fimI = document.querySelector("#fim");
+        let resultadoPrimosI = document.querySelector("#resultadoPrimos");
+        
+        function ehPrimo(n){
+
+            if(n<=1){
+                    return false;
+            }
+            let limite = Math.sqrt(n);
+
+            for(let i = 2; i <= limite; i++){
+
+                if(n%i===0){
+                    return false;
+                }
+
+            }
+
+            return true;
+        };
+
+
+        verificar.addEventListener("click", ()=>{
+        
+            let inicio = Number(inicioI.value);
+            let fim = Number(fimI.value);
+
+            resultadoPrimosI.innerHTML = "";
+
+             for(let i = inicio; i <= fim; i++){
+                if(ehPrimo(i)===true){
+                    let p=document.createElement("p");
+                    p.innerHTML=i;
+                    resultadoPrimosI.appendChild(p);
+                }
+    
+             }
+            
+        });
+
+
+
+    </script>
+
+    
+</body>
+</html>

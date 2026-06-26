@@ -24,23 +24,41 @@
 <?php
 
 
-if(!isset($_GET["p"])){
+    if(!isset($_GET["p"])){
     exit();
-}
-$palavra = $_GET["p"];
+    }
+    $palavra = $_GET["p"];
 
 
-$tam=mb_strlen(trim($palavra));
-echo "Tamanho da palavra: $tam <br>";
+    $tam=mb_strlen(trim($palavra));
+    echo "Tamanho da palavra: $tam <br>";
 
-$palInv=strrev(trim($palavra));
-if ($palInv == $palavra){
-    echo "É palíndromo ";
-}
-else{
-    echo "Não é palíndromo";
-}
+    $palInv=strrev(trim($palavra));
+    if ($palInv == $palavra){
+    echo "É palíndromo <br>";
+    }
+    else{
+    echo "Não é palíndromo <br>";
+    }
 
+    $palavraM = strtoupper($palavra);
+    $letras = str_split($palavraM);
+    $vogais = 0;
+    $consoantes = 0;
+    $totalLetras = count($letras);
+
+    for($i=0; $i<$totalLetras; $i++){
+        
+        if($letras[$i] == "A" || $letras[$i]=="E" || $letras[$i]=="I" || $letras[$i]=="O" || $letras[$i]=="U"){
+            $vogais++; 
+        }
+        else{
+            $consoantes++;
+        }
+    }
+
+    echo "Número de vogais: $vogais <br>";
+    echo "Número de consoantes: $consoantes";
 
 
 ?>
